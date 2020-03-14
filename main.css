@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.5em;
+}
+
+.container {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 1000px;
+  background-color: antiquewhite;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-item {
+  width: 300px;
+}
+
+.grid-item--height2 {
+  height: 400px;
+}
+
+.grid-item--height3 {
+  height: 450px;
+}
