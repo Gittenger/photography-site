@@ -25,7 +25,7 @@ body {
 }
 
 .grid-item {
-  width: 300px;
+  width: 250px;
 }
 
 .grid-item--height2 {
@@ -33,5 +33,9 @@ body {
 }
 
 .grid-item--height3 {
-  height: 450px;
+  height: 300px;
+}
+
+.grid-item--height4 {
+  height: 350px;
 }
