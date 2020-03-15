@@ -15,61 +15,63 @@
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="imgIndex.js"></script>
     <script>
-      var msnry = new Masonry(".grid", {
-        // options
-        itemSelector: ".grid-item",
-        columnWidth: 200
-      });
-
       (function() {
         const grid = document.querySelector(".grid");
 
+        //create grid items based off of imageIndex
         (function createNodes() {
-          function createNode(i) {
-            const imgNode = document.createElement("img");
-            imgNode.setAttribute("src", photos[i - 1].url);
-            return imgNode;
-          }
-
           for (let i = 1; i <= 20; i++) {
-            const node = createNode(i);
+            const node = document.createElement("img");
+            node.setAttribute("src", photos[i - 1].url);
             node.classList.add("grid-item");
             node.classList.add(`grid-item--${i}`);
             grid.appendChild(node);
           }
         })();
 
+        //set height classes on newly created grid items
         (function setHeights() {
+          //cache DOM
           const gridItems = grid.querySelectorAll(".grid-item");
 
-          const height2 = Array.from(gridItems).filter(
-            item =>
-              item.classList.contains("grid-item--1") ||
-              item.classList.contains("grid-item--4") ||
-              item.classList.contains("grid-item--6") ||
-              item.classList.contains("grid-item--13")
-          );
+          //util function to create filter queries
+          const setItems = (...itemsIndexes) => {
+            const arr = [];
+            itemsIndexes.forEach(item => arr.push(`grid-item--${item}`));
+            return arr;
+          };
 
-          const height3 = Array.from(gridItems).filter(
-            item =>
-              item.classList.contains("grid-item--2") ||
-              item.classList.contains("grid-item--3") ||
-              item.classList.contains("grid-item--11") ||
-              item.classList.contains("grid-item--20")
-          );
+          const setHeight = (height, ...items) => {
+            //filters items for adding height class
+            const filtered = [];
+            setItems(...items).forEach(item => {
+              filtered.push(
+                Array.from(gridItems).filter(gridItem =>
+                  gridItem.classList.contains(item)
+                )
+              );
+            });
 
-          const height4 = Array.from(gridItems).filter(
-            item =>
-              item.classList.contains("grid-item--5") ||
-              item.classList.contains("grid-item--7") ||
-              item.classList.contains("grid-item--8") ||
-              item.classList.contains("grid-item--17")
-          );
-          height2.forEach(item => item.classList.add("grid-item--height2"));
-          height3.forEach(item => item.classList.add("grid-item--height3"));
-          height4.forEach(item => item.classList.add("grid-item--height4"));
+            //add height class for all matched items
+            filtered
+              .map(arr => arr[0])
+              .forEach(node =>
+                node.classList.add(`grid-item--height${height}`)
+              );
+          };
+
+          setHeight(2, 1, 3, 5, 9, 11, 13, 15);
+          setHeight(3, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20);
+          setHeight(4, 7);
+          setHeight(5, 17, 19);
         })();
       })();
+
+      const msnry = new Masonry(".grid", {
+        // options
+        itemSelector: ".grid-item",
+        columnWidth: 270
+      });
     </script>
   </body>
 </html>
