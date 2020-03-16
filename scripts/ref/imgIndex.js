@@ -1,7 +1,7 @@
 const photos = [
   {
     id: "1",
-    url: "img/img-1.jpg",
+    url: "assets/img/img-1.jpg",
     photographer: "Elia Pellegrini",
     handle: "@eliapelle",
     location: { coords: [], text: "" },
@@ -11,7 +11,7 @@ const photos = [
   },
   {
     id: "2",
-    url: "img/img-2.jpg",
+    url: "assets/img/img-2.jpg",
     photographer: "Houcine Ncib",
     handle: "@houcinencibphotography",
     location: { coords: [], text: "" },
@@ -19,7 +19,7 @@ const photos = [
   },
   {
     id: "3",
-    url: "img/img-3.jpg",
+    url: "assets/img/img-3.jpg",
     photographer: "Eugene Chystiakov",
     handle: "@eugenechystiakov",
     location: {
@@ -30,7 +30,7 @@ const photos = [
   },
   {
     id: "4",
-    url: "img/img-4.jpg",
+    url: "assets/img/img-4.jpg",
     photographer: "Spencer Davis",
     handle: "@spencerdavis",
     location: { coords: [], text: "Nile River, Cairo, Egypt" },
@@ -38,7 +38,7 @@ const photos = [
   },
   {
     id: "5",
-    url: "img/img-5.jpg",
+    url: "assets/img/img-5.jpg",
     photographer: "Agnieszka Kowalczyk",
     handle: "@koalamoose",
     location: { coords: [], text: "Kudawa, Sri Lanka" },
@@ -46,7 +46,7 @@ const photos = [
   },
   {
     id: "6",
-    url: "img/img-6.jpg",
+    url: "assets/img/img-6.jpg",
     photographer: "Olena Sergienko",
     handle: "@olenkasergienko",
     location: { coords: [], text: "Kyiv, Україна" },
@@ -54,7 +54,7 @@ const photos = [
   },
   {
     id: "7",
-    url: "img/img-7.jpg",
+    url: "assets/img/img-7.jpg",
     photographer: "Alex Azabache",
     handle: "@alexazabache",
     location: { coords: [], text: "Ubud, Gianyar, Bali, Indonesia" },
@@ -62,7 +62,7 @@ const photos = [
   },
   {
     id: "8",
-    url: "img/img-8.jpg",
+    url: "assets/img/img-8.jpg",
     photographer: "Zoltan Tasi",
     handle: "@zoltantasi",
     location: {
@@ -73,7 +73,7 @@ const photos = [
   },
   {
     id: "9",
-    url: "img/img-9.jpg",
+    url: "assets/img/img-9.jpg",
     photographer: "Clay Banks",
     handle: "@claybanks",
     location: { coords: [], text: "Antelope Canyon, Arizona, USA" },
@@ -81,7 +81,7 @@ const photos = [
   },
   {
     id: "10",
-    url: "img/img-10.jpg",
+    url: "assets/img/img-10.jpg",
     photographer: "Sabina Tone",
     handle: "@etonesabina",
     location: { coords: [], text: "Almaty, Kazakhstan" },
@@ -89,7 +89,7 @@ const photos = [
   },
   {
     id: "11",
-    url: "img/img-11.jpg",
+    url: "assets/img/img-11.jpg",
     photographer: "Sabina Tone",
     handle: "@etonesabina",
     location: { coords: [], text: "Shymbulak, Almaty, Kazakhstan" },
@@ -97,7 +97,7 @@ const photos = [
   },
   {
     id: "12",
-    url: "img/img-12.jpg",
+    url: "assets/img/img-12.jpg",
     photographer: "Lesia and Serhii Artymovych",
     handle: "@lesiako",
     location: { coords: [], text: "" },
@@ -105,7 +105,7 @@ const photos = [
   },
   {
     id: "13",
-    url: "img/img-13.jpg",
+    url: "assets/img/img-13.jpg",
     photographer: "Yiran Ding",
     handle: "@yiranding",
     location: { coords: [], text: "" },
@@ -113,7 +113,7 @@ const photos = [
   },
   {
     id: "14",
-    url: "img/img-14.jpg",
+    url: "assets/img/img-14.jpg",
     photographer: "Jon Tyson",
     handle: "@jontyson",
     location: { coords: [], text: "" },
@@ -121,7 +121,7 @@ const photos = [
   },
   {
     id: "15",
-    url: "img/img-15.jpg",
+    url: "assets/img/img-15.jpg",
     photographer: "Jon Tyson",
     handle: "@jontyson",
     location: { coords: [], text: "" },
@@ -129,7 +129,7 @@ const photos = [
   },
   {
     id: "16",
-    url: "img/img-16.jpg",
+    url: "assets/img/img-16.jpg",
     photographer: "Adrian Infernus",
     handle: "@adrian_infernus",
     location: { coords: [], text: "" },
@@ -137,7 +137,7 @@ const photos = [
   },
   {
     id: "17",
-    url: "img/img-17.jpg",
+    url: "assets/img/img-17.jpg",
     photographer: "Wilfried Santer",
     handle: "@wsanter",
     location: { coords: [], text: "" },
@@ -145,7 +145,7 @@ const photos = [
   },
   {
     id: "18",
-    url: "img/img-18.jpg",
+    url: "assets/img/img-18.jpg",
     photographer: "Christian Fregnan",
     handle: "@christianfregnan",
     location: { coords: [], text: "Museum Voorlinden, Wassenaar, Netherlands" },
@@ -153,7 +153,7 @@ const photos = [
   },
   {
     id: "19",
-    url: "img/img-19.jpg",
+    url: "assets/img/img-19.jpg",
     photographer: "Matthew LeJune",
     handle: "@matthewlejune",
     location: { coords: [], text: "New Orleans, United States" },
@@ -161,7 +161,7 @@ const photos = [
   },
   {
     id: "20",
-    url: "img/img-20.jpg",
+    url: "assets/img/img-20.jpg",
     photographer: "Matthew LeJune",
     handle: "@matthewlejune",
     location: { coords: [], text: "New Orleans, United States" },
