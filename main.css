@@ -22,7 +22,6 @@ body {
 }
 
 .grid {
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -33,20 +32,17 @@ body {
 .grid-item {
   width: 270px;
   margin: 0 0 10px;
-}
-
-.grid-item--height2 {
   height: 400px;
 }
 
-.grid-item--height3 {
+.grid-item--height2 {
   height: 370px;
 }
 
-.grid-item--height4 {
-  height: 380px;
+.grid-item--height3 {
+  height: 300px;
 }
 
-.grid-item--height5 {
-  height: 300px;
+.grid-item--height4 {
+  height: 250px;
 }

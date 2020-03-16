@@ -4,94 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="sal.js/dist/sal.css" />
+    <link rel="stylesheet" href="lib/sal/sal.css" />
     <link rel="stylesheet" href="main.css" />
 
     <title>Photographer Site</title>
   </head>
   <body>
     <div class="container">
-      <div id="grid" class="grid"></div>
+      <div class="grid"></div>
     </div>
 
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="imgIndex.js"></script>
-    <script src="sal.js/dist/sal.js"></script>
-    <script>
-      (function() {
-        //cache dom
-        const grid = document.querySelector(".grid");
-        const gridItems = grid.querySelectorAll(".grid-item");
-
-        //create grid items based off of imageIndex
-        (function createNodes() {
-          for (let i = 1; i <= 20; i++) {
-            const node = document.createElement("img");
-            node.setAttribute("src", photos[i - 1].url);
-            node.classList.add("grid-item");
-            node.classList.add(`grid-item--${i}`);
-            grid.appendChild(node);
-          }
-        })();
-
-        //set classes on newly created grid items
-        (function() {
-          const gridItems = grid.querySelectorAll(".grid-item");
-
-          //util function to create filter queries
-          const setItems = (...itemsIndexes) => {
-            const arr = [];
-            itemsIndexes.forEach(item => arr.push(`grid-item--${item}`));
-            return arr;
-          };
-
-          const setHeight = (height, ...items) => {
-            //filters items for adding height class
-            const filtered = [];
-            setItems(...items).forEach(item => {
-              filtered.push(
-                Array.from(gridItems).filter(gridItem =>
-                  gridItem.classList.contains(item)
-                )
-              );
-            });
-
-            //add height class for all matched items
-            filtered
-              .map(arr => arr[0])
-              .forEach(node =>
-                node.classList.add(`grid-item--height${height}`)
-              );
-          };
-
-          setHeight(2, 1, 3, 5, 9, 11, 13, 15);
-          setHeight(3, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20);
-          setHeight(4, 7);
-          setHeight(5, 17, 19);
-
-          //set data attributes for animation with sal
-          (function() {
-            gridItems.forEach(item => {
-              item.setAttribute("data-sal", "fade");
-              item.setAttribute("data-sal-duration", "300");
-              item.setAttribute("data-sal-delay", "200");
-              item.setAttribute("data-sal-easing", "ease-in-bounce");
-            });
-          })();
-        })();
-      })();
-
-      sal({
-        once: true
-      });
-
-      const msnry = new Masonry(".grid", {
-        // options
-        itemSelector: ".grid-item",
-        columnWidth: 270,
-        gutter: 15,
-        fitWidth: true
-      });
-    </script>
+    <script src="./lib/masonry/masonry.min.js"></script>
+    <script src="./lib/sal/sal.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+    <script></script>
   </body>
 </html>

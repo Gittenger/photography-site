@@ -168,3 +168,5 @@ const photos = [
     other: { text: "" }
   }
 ];
+
+export default photos;
