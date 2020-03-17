@@ -3,35 +3,39 @@
   src: url("./fonts/FiraSans-Regular.ttf");
 }
 
+/* BASE/RESETS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  user-select: inherit;
 }
 
 html {
   font-size: 62.5%;
+
+  /* SET CUSTOM PROPERTIES */
+  --black: rgb(12, 12, 12);
+  --background: #e4e4ee;
+  --secondary: #9b0d0d;
 }
 
 body {
+  font-family: "Fira-sans";
   box-sizing: border-box;
   font-size: 1.5em;
   max-width: 100vw;
-  background-color: antiquewhite;
+  background-color: var(--background);
 }
 
-.border-top {
+/* BORDER */
+.border-top,
+.border-bottom {
   height: 6px;
-  background-color: black;
+  background-color: var(--black);
 }
 
-.nav-link {
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari and Chrome */
-  -o-animation: fadein 2s; /* Opera */
-}
-
+/* ANIMATIONS */
 @keyframes fadein {
   from {
     opacity: 0;
@@ -41,13 +45,14 @@ body {
   }
 }
 
+/* HEADER */
 header {
-  font-family: "Fira-sans";
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
   padding: 15px 25px;
+  user-select: none;
 }
 
 header title {
@@ -56,19 +61,78 @@ header title {
 
 header .nav-link {
   font-size: xx-large;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+header .nav-link:hover {
+  color: var(--secondary);
+}
+
+/* GLOBAL LINK STYLES */
+a {
   transition: color 0.3s;
 }
 
-header .nav-link:visited,
-header .nav-link:link {
+a:visited,
+a:link {
   color: unset;
   text-decoration: none;
 }
 
-header .nav-link:hover {
-  color: red;
+/* FOOTER */
+footer {
+  user-select: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 35px;
 }
 
+/* FOOTER SVG LINKS */
+footer .media-links {
+  display: flex;
+  align-items: center;
+}
+
+footer .media-links li {
+  margin: 0 20px;
+  list-style: none;
+}
+
+footer .media-links li:hover {
+  cursor: pointer;
+}
+
+footer svg {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+footer svg:hover {
+  transform: translateY(-3px);
+}
+
+/* lEGAL INFO */
+footer .site-author a {
+  color: var(--secondary);
+}
+
+footer .site-author a:hover {
+  color: unset;
+}
+
+/* DISCLAIMER TEXT */
+.disclaimer {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  font-size: x-small;
+}
+
+/* MAIN CONTAINER */
 .container {
   overflow-x: hidden;
   min-height: 1000px;
@@ -76,12 +140,10 @@ header .nav-link:hover {
   padding: 10px 50px 50px 50px;
 }
 
+/* MASONRY GRID */
 .grid {
+  user-select: none;
   margin: 0 auto;
-}
-
-.container::-webkit-scrollbar {
-  display: none;
 }
 
 .grid-item {
@@ -100,4 +162,29 @@ header .nav-link:hover {
 
 .grid-item--height4 {
   height: 250px;
+}
+
+/* SCROLLBAR SETTINGS */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.781);
+  border-radius: 6px;
+  width: 6px;
+  height: 6px;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
