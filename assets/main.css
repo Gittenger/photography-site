@@ -194,6 +194,14 @@ footer .site-author a:hover {
   height: 250px;
 }
 
+.grid-item--height5 {
+  height: 420px;
+}
+
+.grid-item--height6 {
+  height: 220px;
+}
+
 /* IMAGES IN GRID */
 
 .grid-item figure {

@@ -17,19 +17,23 @@ export default function createNodes(grid) {
     wrapper.classList.add("image-wrapper");
     fig.appendChild(wrapper);
     fig.appendChild(document.createElement("figcaption"));
+
+    //create caption
     const captionText = `Photographer: ${
       photos[i - 1].photographer
     }; Instagram: ${photos[i - 1].handle}`;
     const caption = document.createTextNode(captionText);
     fig.querySelector("figcaption").appendChild(caption);
+
     //set tooltip to caption
     imgBox.setAttribute("title", captionText);
 
+    //create imgs, append to wrapper
     const img = document.createElement("img");
     img.setAttribute("src", photos[i - 1].url);
-
     wrapper.appendChild(img);
 
+    //append boxes to grid
     grid.appendChild(imgBox);
   }
 }
