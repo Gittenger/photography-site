@@ -14,7 +14,7 @@ import setSalData from "./utils/setSalData.js";
   //set height classes on newly created grid items
   setHeight(2, gridItems, 2, 4, 6, 8, 12, 14, 16, 18, 20);
   setHeight(3, gridItems, 17);
-  setHeight(4, gridItems, 19);
+  setHeight(4, gridItems, 19, 25, 37);
 
   //set data attributes for animation with sal
   setSalData(gridItems);

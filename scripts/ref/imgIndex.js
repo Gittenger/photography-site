@@ -166,6 +166,175 @@ const photos = [
     handle: "@matthewlejune",
     location: { coords: [], text: "New Orleans, United States" },
     other: { text: "" }
+  },
+  {
+    id: "21",
+    url: "assets/img/img-21.jpg",
+    photographer: "Afonso Morais",
+    handle: "@morais_afonso",
+    location: { coords: [], text: "Téléphérique, Grenoble, França" },
+    other: { text: "" }
+  },
+  {
+    id: "22",
+    url: "assets/img/img-22.jpg",
+    photographer: "Aliaksei Lepik",
+    handle: "@vegfrt",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "23",
+    url: "assets/img/img-23.jpg",
+    photographer: "Aliaksei Lepik",
+    handle: "@vegfrt",
+    location: { coords: [], text: "Minsk, Беларусь" },
+    other: { text: "Soviet mural in Minsk" }
+  },
+  {
+    id: "24",
+    url: "assets/img/img-24.jpg",
+    photographer: "Aliaksei Lepik",
+    handle: "@vegfrt",
+    location: { coords: [], text: "Minsk, Беларусь" },
+    other: { text: "" }
+  },
+  {
+    id: "25",
+    url: "assets/img/img-25.jpg",
+    photographer: "Annie Spratt",
+    handle: "@anniespratt",
+    location: { coords: [], text: "" },
+    other: {
+      text:
+        "35mm film photos of of a child with hands over eyes. Canon AE-1 + Kodak ColorPlus 200"
+    }
+  },
+  {
+    id: "26",
+    url: "assets/img/img-26.jpg",
+    photographer: "Annie Spratt",
+    handle: "@anniespratt",
+    location: {
+      coords: [],
+      text: "45 Church Ln, Fawley, Southampton SO45 1DL, UK, United Kingdom"
+    },
+    other: { text: "" }
+  },
+  {
+    id: "27",
+    url: "assets/img/img-27.jpg",
+    photographer: "Annie Spratt",
+    handle: "@anniespratt",
+    location: { coords: [], text: "" },
+    other: { text: "Inter Navex 1972, Olympia. 1970s 35mm film slide photo" }
+  },
+  {
+    id: "28",
+    url: "assets/img/img-28.jpg",
+    photographer: "Annie Spratt",
+    handle: "@anniespratt",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "29",
+    url: "assets/img/img-29.jpg",
+    photographer: "Lesia and Serhii Artymovych",
+    handle: "@lesiako",
+    location: { coords: [], text: "Kyiv" },
+    other: { text: "" }
+  },
+  {
+    id: "30",
+    url: "assets/img/img-30.jpg",
+    photographer: "Lesia and Serhii Artymovych",
+    handle: "@lesiako",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "31",
+    url: "assets/img/img-31.jpg",
+    photographer: "Barna Kovács",
+    handle: "@barnikakovacs",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "32",
+    url: "assets/img/img-32.jpg",
+    photographer: "Jakob Cotton",
+    handle: "@jakobcotton",
+    location: { coords: [], text: "Leeds, UK" },
+    other: { text: "A neon sign in a window, reading 'PIZZA BY THE SLICE'" }
+  },
+  {
+    id: "33",
+    url: "assets/img/img-33.jpg",
+    photographer: "Jeff Kepler",
+    handle: " @pacific_argonaut",
+    location: { coords: [], text: "" },
+    other: { text: "Fallow Me" }
+  },
+  {
+    id: "34",
+    url: "assets/img/img-34.jpg",
+    photographer: "Jiaqi Zhang",
+    handle: "@jiaqi318",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "35",
+    url: "assets/img/img-35.jpg",
+    photographer: "Kyle Ryan",
+    handle: "@kylry",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "36",
+    url: "assets/img/img-36.jpg",
+    photographer: "yan lee",
+    handle: "@yanlee_leeyan",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "37",
+    url: "assets/img/img-37.jpg",
+    photographer: "Markus Spiske",
+    handle: "@markusspiske",
+    location: { coords: [], text: "Nürnberg, Deutschland" },
+    other: {
+      text:
+        "Vintage US muscle car Dodge Charger (Year: 1968, V8, 375 PS). Made with Leica R7 (Year: 1994) and Leica Summicron-R 2.0 35mm (Year: 1978). Analog scan via nimmfilm.de: Fuji Frontier SP-3000. Film reel: Kodak Ektarchrome E100"
+    }
+  },
+  {
+    id: "38",
+    url: "assets/img/img-38.jpg",
+    photographer: "Dipuraj Thapa",
+    handle: "@dipuraj",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "39",
+    url: "assets/img/img-39.jpg",
+    photographer: "Colton Sturgeon",
+    handle: "@coltonsturgeon",
+    location: { coords: [], text: "" },
+    other: { text: "" }
+  },
+  {
+    id: "40",
+    url: "assets/img/img-40.jpg",
+    photographer: "Bo Kim",
+    handle: "@bphotography",
+    location: { coords: [], text: "Otaru, Japan" },
+    other: { text: "" }
   }
 ];
 
