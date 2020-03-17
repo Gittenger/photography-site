@@ -66,14 +66,17 @@ const msnry = new Masonry(".grid", {
   }
 
   stampButton.addEventListener("click", function() {
+    //trigger styles
+    setStyles(isStamped, stampElem);
+
     // stamp or unstamp element
     if (isStamped) {
       msnry.unstamp(stampElem);
     } else {
-      msnry.stamp(stampElem);
+      setTimeout(() => {
+        msnry.stamp(stampElem);
+      }, 500);
     }
-    //trigger styles
-    setStyles(isStamped, stampElem);
 
     // trigger layout
     msnry.layout();
