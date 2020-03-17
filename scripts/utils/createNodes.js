@@ -31,6 +31,7 @@ export default function createNodes(grid) {
     //create imgs, append to wrapper
     const img = document.createElement("img");
     img.setAttribute("src", photos[i - 1].url);
+    img.setAttribute("alt", photos[i - 1].other.text);
     wrapper.appendChild(img);
 
     //append boxes to grid
