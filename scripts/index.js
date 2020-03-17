@@ -22,7 +22,7 @@ import setSalData from "./utils/setSalData.js";
 
 //sal options
 sal({
-  once: true
+  once: false
 });
 
 //masonry options
@@ -33,3 +33,50 @@ const msnry = new Masonry(".grid", {
   gutter: 15,
   fitWidth: true
 });
+
+//set listeners
+(function() {
+  const grid = document.querySelector(".grid");
+  const stampElem = grid.querySelector(".information");
+  const stampButton = document.querySelector("header .stamp-button");
+
+  let isStamped = false;
+
+  function setStyles(stamped, stamp) {
+    const notStamp = grid.querySelectorAll(":not(.stamp)");
+
+    Array.from(notStamp).forEach(elem => {
+      if (elem.classList.contains("fade")) elem.classList.remove("fade");
+      else elem.classList.add("fade");
+
+      if (elem.classList.contains("hidden")) elem.classList.remove("hidden");
+      else
+        setTimeout(() => {
+          elem.classList.add("hidden");
+          msnry.layout();
+        }, 600);
+    });
+
+    if (stampElem.classList.contains("fade"))
+      stampElem.classList.remove("fade");
+    else
+      setTimeout(() => {
+        stampElem.classList.add("fade");
+      }, 500);
+  }
+
+  stampButton.addEventListener("click", function() {
+    // stamp or unstamp element
+    if (isStamped) {
+      msnry.unstamp(stampElem);
+    } else {
+      msnry.stamp(stampElem);
+    }
+    //trigger styles
+    setStyles(isStamped, stampElem);
+
+    // trigger layout
+    msnry.layout();
+    isStamped = !isStamped;
+  });
+})();

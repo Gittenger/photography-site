@@ -132,10 +132,36 @@ footer .site-author a:hover {
   font-size: x-small;
 }
 
+/* INFO MODAL */
+.information {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+  background-color: aliceblue;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+.stamp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 4px dotted black;
+}
+
+.stamp.fade {
+  opacity: 1;
+}
+
+#information.active {
+  opacity: 1;
+}
+
 /* MAIN CONTAINER */
 .container {
-  overflow-x: hidden;
-  min-height: 1000px;
   background-color: transparent;
   padding: 10px 50px 50px 50px;
 }
@@ -150,6 +176,15 @@ footer .site-author a:hover {
   width: 270px;
   margin: 0 0 10px;
   height: 400px;
+  transition: opacity 0.5s;
+}
+
+.grid-item.fade {
+  opacity: 0;
+}
+
+.grid-item.hidden {
+  display: none;
 }
 
 .grid-item--height2 {
@@ -173,7 +208,7 @@ footer .site-author a:hover {
 
 /* track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--black);
 }
 
 /* handle */
