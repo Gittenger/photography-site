@@ -2,10 +2,12 @@ import createNodes from "./utils/createNodes.js";
 import setHeight from "./utils/setHeight.js";
 import setSalData from "./utils/setSalData.js";
 
+const grid = document.querySelector(".grid");
+const header = document.querySelector("header");
+
 //create grid
 (function() {
   //cache grid
-  const grid = document.querySelector(".grid");
 
   //create grid items based off of imageIndex, cache
   createNodes(grid);
@@ -36,52 +38,76 @@ const msnry = new Masonry(".grid", {
   fitWidth: true
 });
 
+const state = {
+  infoVisible: false
+};
+
 //set listeners
 (function() {
-  const grid = document.querySelector(".grid");
-  const stampElem = grid.querySelector(".information");
-  const stampButton = document.querySelector("header .stamp-button");
+  const infoButton = header.querySelector("header .info-button");
+  const homeButton = header.querySelector("header .home-button");
+  const notStamp = grid.querySelectorAll(":not(.stamp)");
+  const info = grid.querySelector(".information");
 
-  let isStamped = false;
-
-  function setStyles(stamped, stamp) {
-    const notStamp = grid.querySelectorAll(":not(.stamp)");
-
+  //util functions for listeners
+  function hideGridItems() {
     Array.from(notStamp).forEach(elem => {
-      if (elem.classList.contains("fade")) elem.classList.remove("fade");
-      else elem.classList.add("fade");
+      elem.classList.add("fadeOut");
 
-      if (elem.classList.contains("hidden")) elem.classList.remove("hidden");
-      else
-        setTimeout(() => {
-          elem.classList.add("hidden");
-          msnry.layout();
-        }, 600);
-    });
-
-    if (stampElem.classList.contains("fade"))
-      stampElem.classList.remove("fade");
-    else
       setTimeout(() => {
-        stampElem.classList.add("fade");
-      }, 500);
+        elem.classList.add("hidden");
+      }, 400);
+    });
   }
 
-  stampButton.addEventListener("click", function() {
-    //trigger styles
-    setStyles(isStamped, stampElem);
+  function showInfo() {
+    setTimeout(() => {
+      info.classList.add("fadeIn");
+    }, 300);
+  }
 
-    // stamp or unstamp element
-    if (isStamped) {
-      msnry.unstamp(stampElem);
-    } else {
-      setTimeout(() => {
-        msnry.stamp(stampElem);
-      }, 500);
-    }
+  function hideInfo() {
+    info.classList.remove("fadeIn");
+  }
+
+  function showGridItems() {
+    Array.from(notStamp).forEach(elem => {
+      elem.classList.remove("hidden");
+      elem.classList.remove("fadeOut");
+    });
+  }
+
+  //show info
+  infoButton.addEventListener("click", function() {
+    if (state.infoVisible) return;
+    hideGridItems();
+    showInfo();
+
+    setTimeout(() => {
+      msnry.stamp(info);
+      msnry.layout();
+    }, 700);
+
+    // trigger layout
+    state.infoVisible = true;
+  });
+
+  //hide info
+  homeButton.addEventListener("click", function() {
+    if (!state.infoVisible) return;
+
+    hideInfo();
+    showGridItems();
+
+    //unstamp element
+    msnry.unstamp(info);
+
+    setTimeout(() => {
+      msnry.layout();
+    }, 700);
 
     // trigger layout
     msnry.layout();
-    isStamped = !isStamped;
+    state.infoVisible = false;
   });
 })();
