@@ -2,13 +2,12 @@ import createNodes from "./utils/createNodes.js";
 import setHeight from "./utils/setHeight.js";
 import setSalData from "./utils/setSalData.js";
 
+//cache grid and header
 const grid = document.querySelector(".grid");
 const header = document.querySelector("header");
 
 //create grid
 (function() {
-  //cache grid
-
   //create grid items based off of imageIndex, cache
   createNodes(grid);
   const gridItems = grid.querySelectorAll(".grid-item");
@@ -46,7 +45,7 @@ const state = {
 (function() {
   const infoButton = header.querySelector("header .info-button");
   const homeButton = header.querySelector("header .home-button");
-  const notStamp = grid.querySelectorAll(":not(.stamp)");
+  const notStamp = grid.querySelectorAll(".grid > :not(.stamp)");
   const info = grid.querySelector(".information");
 
   //util functions for listeners

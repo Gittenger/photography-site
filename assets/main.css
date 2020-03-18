@@ -17,6 +17,7 @@ html {
   /* SET CUSTOM PROPERTIES */
   --black: rgb(12, 12, 12);
   --background: #e4e4ee;
+  --info: #e7e7f7d5;
   --secondary: #9b0d0d;
 }
 
@@ -136,19 +137,31 @@ footer .site-author a:hover {
 .information {
   position: absolute;
   display: grid;
-  place-content: center;
+  grid-template-columns: 1fr 1fr;
   opacity: 0;
   transition: all 0.4s;
-  background-color: aliceblue;
+  background-color: var(--info);
+  box-shadow: 1px 1px 1px var(--black), 0px -1px 2px var(--black);
+  border-radius: 6px;
   height: 100vh;
   width: 100%;
+}
+
+.information .avatar-box {
+  max-width: 270px;
+  align-self: center;
+  justify-self: center;
+}
+
+.information .info-box {
+  align-self: center;
+  justify-self: center;
 }
 
 .stamp {
   position: absolute;
   left: 0;
   top: 0;
-  border: 4px dotted black;
 }
 
 .stamp.fadeIn {

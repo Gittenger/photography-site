@@ -20,8 +20,8 @@ export default function createNodes(grid) {
 
     //create caption
     const captionText = `Photographer: ${
-      photos[i - 1].photographer
-    }; Instagram: ${photos[i - 1].handle}`;
+      photos.main[i - 1].photographer
+    }; Instagram: ${photos.main[i - 1].handle}`;
     const caption = document.createTextNode(captionText);
     fig.querySelector("figcaption").appendChild(caption);
 
@@ -30,8 +30,8 @@ export default function createNodes(grid) {
 
     //create imgs, append to wrapper
     const img = document.createElement("img");
-    img.setAttribute("src", photos[i - 1].url);
-    img.setAttribute("alt", photos[i - 1].other.text);
+    img.setAttribute("src", photos.main[i - 1].url);
+    img.setAttribute("alt", photos.main[i - 1].other.text);
     wrapper.appendChild(img);
 
     //append boxes to grid
